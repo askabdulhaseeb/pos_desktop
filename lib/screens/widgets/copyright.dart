@@ -31,7 +31,7 @@ class Copyrights extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () => _launchURL(),
-                  child: const Text('Eyes Soft'),
+                  child: const Text('Eyez Soft'),
                 )
               ],
             ),

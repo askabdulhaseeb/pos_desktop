@@ -48,8 +48,8 @@ class PasswordTextFormFieldState extends State<PasswordTextFormField> {
             }),
             splashRadius: Utilities.iconBorderRadius,
             icon: (_notVisible == true)
-                ? const Icon(CupertinoIcons.eye)
-                : const Icon(CupertinoIcons.eye_slash),
+                ? const Icon(CupertinoIcons.eye, size: 20)
+                : const Icon(CupertinoIcons.eye_slash, size: 20),
           ),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(Utilities.borderRadious),

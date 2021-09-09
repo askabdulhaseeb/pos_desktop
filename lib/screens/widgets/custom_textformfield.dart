@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../utilities/utilities.dart';
@@ -66,6 +67,15 @@ class CustomTextFormFieldState extends State<CustomTextFormField> {
         decoration: InputDecoration(
           labelText: widget.title,
           hintText: widget.hint,
+          suffixIcon: (widget._controller.text.isEmpty)
+              ? const SizedBox()
+              : IconButton(
+                  splashRadius: Utilities.iconBorderRadius,
+                  onPressed: () => setState(() {
+                    widget._controller.clear();
+                  }),
+                  icon: const Icon(CupertinoIcons.clear, size: 18),
+                ),
           focusColor: Theme.of(context).primaryColor,
           border: OutlineInputBorder(
             borderSide: BorderSide(color: Theme.of(context).primaryColor),
